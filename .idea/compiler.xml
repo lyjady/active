@@ -6,18 +6,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="active-spring-boot" />
+        <module name="active-boot-topic-consumer-2" />
+        <module name="active-boot-topic-consumer-1" />
         <module name="active-spring" />
+        <module name="active-spring-boot" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="active" target="12" />
-      <module name="active-spring" target="12" />
+      <module name="active" target="1.5" />
+      <module name="active-boot-topic-consumer-1" target="12" />
+      <module name="active-boot-topic-consumer-2" target="12" />
+      <module name="active-spring" target="1.5" />
       <module name="active-spring-boot" target="12" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="active-boot-topic-consumer-1" options="-parameters" />
+      <module name="active-boot-topic-consumer-2" options="-parameters" />
       <module name="active-spring-boot" options="-parameters" />
     </option>
   </component>

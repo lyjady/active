@@ -5,30 +5,26 @@ import org.springframework.jms.core.JmsMessagingTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import javax.jms.Queue;
+import javax.jms.Topic;
 import java.util.UUID;
 
 /**
  * @author LinYongJin
- * @date 2019/9/12 22:54
+ * @date 2019/9/14 13:44
  */
 @Component
-public class MessageProducer {
+public class TopicMessageProducer {
 
     @Autowired
     private JmsMessagingTemplate jmsMessagingTemplate;
 
     @Autowired
-    private Queue queue;
+    private Topic topic;
 
-    public void sendMessageToQueue() {
-        jmsMessagingTemplate.convertAndSend(queue, "SpringBoot发送自队列的消息");
-    }
-
-//    @Scheduled(fixedDelay = 3000)
-    public void scheduledSendMessage() {
+    @Scheduled(fixedDelay = 3000)
+    public void sendMessageTopic() {
         String message = UUID.randomUUID().toString().replace("-", "");
-        System.out.println("发送消息: " + message);
-        jmsMessagingTemplate.convertAndSend(queue, message);
+        System.out.println("发送的消息: " + message);
+        jmsMessagingTemplate.convertAndSend(topic, "发送给队列的消息: " + message);
     }
 }

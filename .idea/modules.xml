@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/active.iml" filepath="$PROJECT_DIR$/.idea/active.iml" />
+      <module fileurl="file://$PROJECT_DIR$/active-boot-topic-consumer-1/active-boot-topic-consumer-1.iml" filepath="$PROJECT_DIR$/active-boot-topic-consumer-1/active-boot-topic-consumer-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/active-boot-topic-consumer-2/active-boot-topic-consumer-2.iml" filepath="$PROJECT_DIR$/active-boot-topic-consumer-2/active-boot-topic-consumer-2.iml" />
       <module fileurl="file://$PROJECT_DIR$/active-spring/active-spring.iml" filepath="$PROJECT_DIR$/active-spring/active-spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/active-spring-boot/active-spring-boot.iml" filepath="$PROJECT_DIR$/active-spring-boot/active-spring-boot.iml" />
     </modules>

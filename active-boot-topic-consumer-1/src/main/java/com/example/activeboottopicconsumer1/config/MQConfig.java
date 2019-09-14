@@ -1,4 +1,4 @@
-package com.example.activespringboot.config;
+package com.example.activeboottopicconsumer1.config;
 
 import org.apache.activemq.command.ActiveMQQueue;
 import org.apache.activemq.command.ActiveMQTopic;
