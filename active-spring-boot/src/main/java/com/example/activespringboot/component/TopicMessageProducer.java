@@ -21,7 +21,7 @@ public class TopicMessageProducer {
     @Autowired
     private Topic topic;
 
-    @Scheduled(fixedDelay = 3000)
+//    @Scheduled(fixedDelay = 3000)
     public void sendMessageTopic() {
         String message = UUID.randomUUID().toString().replace("-", "");
         System.out.println("发送的消息: " + message);

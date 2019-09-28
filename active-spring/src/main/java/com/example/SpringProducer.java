@@ -22,9 +22,7 @@ public class SpringProducer {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
         SpringProducer producer = applicationContext.getBean("springProducer", SpringProducer.class);
-        producer.jmsTemplate.send(session -> {
-            return session.createTextMessage("Spring发送的消息");
-        });
+        producer.jmsTemplate.send(session -> session.createTextMessage("Spring发送的消息"));
         System.out.println("发送成功!!!");
     }
 }

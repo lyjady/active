@@ -18,6 +18,7 @@ public class CustomMessageListener implements MessageListener {
     public void onMessage(Message message) {
         if (message instanceof TextMessage) {
             try {
+                System.out.println("CustomListener");
                 System.out.println(((TextMessage) message).getText());
             } catch (JMSException e) {
                 e.printStackTrace();

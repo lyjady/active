@@ -22,8 +22,10 @@ public class MessageConsumer {
     @Autowired
     private Queue queue;
 
+    private static int count = 0;
+
     //MessageListener监听器监听队列
-    @JmsListener(destination = "spring-boot-queue")
+//    @JmsListener(destination = "spring-boot-queue")
     public void receiveMessage(TextMessage textMessage) throws JMSException {
         System.out.println("监听器监听到的消息: " + textMessage.getText());
     }

@@ -2,8 +2,8 @@ server:
   port: 8888
 spring:
   activemq:
-    broker-url: tcp://192.168.0.110:61616
+    broker-url: tcp://192.168.0.108:61616
     user: admin
     password: admin
   jms:
-    pub-sub-domain: true #false为队列模式 true为主题模式
+    pub-sub-domain: false #false为队列模式 true为主题模式
